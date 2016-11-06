@@ -8,18 +8,15 @@ namespace KataPrimeFactors
 		public List<int> Calculate(int n)
 		{
 			var factors = new List<int>();
-			if (n > 1)
+			var divisor = 2;
+			while (n > 1)
 			{
-				while (n % 2 == 0)
+				while (n % divisor == 0)
 				{
-					factors.Add(2);
-					n /= 2;
+					factors.Add(divisor);
+					n /= divisor;
 				}
-				while (n % 3 == 0)
-				{
-					factors.Add(3);
-					n /= 3;
-				}
+				divisor++;
 			}
 			if (n > 1)
 			{
