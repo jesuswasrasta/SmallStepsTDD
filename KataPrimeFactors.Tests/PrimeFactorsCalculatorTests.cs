@@ -16,5 +16,15 @@ namespace KataPrimeFactors.Tests
 			
 			Assert.AreEqual(expectedResult, actualResult);
 		}
+
+		[Test]
+		public void PrimeFactorOfTwoIsTwo()
+		{
+			var calculator = new PrimeFactorsCalculator();
+			var expectedResult = new List<int> {2};
+			var actualResult = calculator.Calculate(2);
+			
+			Assert.AreEqual(expectedResult, actualResult);
+		}
 	}
 }
