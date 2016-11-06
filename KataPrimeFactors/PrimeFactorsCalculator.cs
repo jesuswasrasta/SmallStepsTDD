@@ -18,10 +18,6 @@ namespace KataPrimeFactors
 				}
 				divisor++;
 			}
-			if (n > 1)
-			{
-				factors.Add(n);
-			}
 			return factors;
 		}
 	}
