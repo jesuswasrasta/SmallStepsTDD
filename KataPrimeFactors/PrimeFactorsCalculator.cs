@@ -5,12 +5,12 @@ namespace KataPrimeFactors
 {
 	public class PrimeFactorsCalculator
 	{
-		public List<int> Calculate(int number)
+		public List<int> Calculate(int n)
 		{
 			var factors = new List<int>();
-			if (number > 1)
+			if (n > 1)
 			{
-				factors.Add(2);
+				factors.Add(n);
 			}
 			return factors;
 		}
