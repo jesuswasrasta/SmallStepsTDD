@@ -7,22 +7,18 @@ namespace KataPrimeFactors.Tests
 {
 	public class PrimeFactorsCalculatorTests
     {
-		[Test]
-		public void OneHasNoPrimeFactors()
+		[TestCase(1)]
+		[TestCase(2, 2)]
+		public void OneHasNoPrimeFactors(int number, params int[] numbers)
 		{
 			var calculator = new PrimeFactorsCalculator();
 			var expectedResult = new List<int>();
-			var actualResult = calculator.Calculate(1);
-			
-			Assert.AreEqual(expectedResult, actualResult);
-		}
+			//if (numbers != null)
+			{
+				expectedResult.AddRange(numbers);
+			}
 
-		[Test]
-		public void PrimeFactorOfTwoIsTwo()
-		{
-			var calculator = new PrimeFactorsCalculator();
-			var expectedResult = new List<int> {2};
-			var actualResult = calculator.Calculate(2);
+			var actualResult = calculator.Calculate(number);
 			
 			Assert.AreEqual(expectedResult, actualResult);
 		}
