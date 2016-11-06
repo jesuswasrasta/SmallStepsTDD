@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 
 namespace KataPrimeFactors.Tests
@@ -11,9 +6,14 @@ namespace KataPrimeFactors.Tests
 	public class PrimeFactorsCalculatorTests
     {
 		[Test]
-		public void Nothing()
+		public void OneHasNoPrimeFactors()
 		{
-			//Ok, just testing everything is ready before the kata start! :)
+			var calculator = new PrimeFactorsCalculator();
+			var expectedResult = new List();
+
+			var actualResult = calculator.Calculate(1);
+
+			CollectionAssert.AreEquivalent(expectedResult, actualResult);
 		}
 	}
 }
