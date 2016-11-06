@@ -11,14 +11,12 @@ namespace KataPrimeFactors
 			var divisor = 2;
 			while (n > 1)
 			{
-				while (n%divisor == 0)
+				for (; n % divisor == 0; n /= divisor)
 				{
 					factors.Add(divisor);
-					n /= divisor;
 				}
 				divisor++;
 			}
-			factors.Add(n);
 			return factors;
 		}
 	}
