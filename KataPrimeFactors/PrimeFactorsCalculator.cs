@@ -15,7 +15,6 @@ namespace KataPrimeFactors
 					factors.Add(2);
 					n /= 2;
 				}
-
 			}
 			if (n > 1)
 			{
