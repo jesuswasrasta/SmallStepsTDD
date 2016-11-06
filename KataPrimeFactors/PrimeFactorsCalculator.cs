@@ -7,7 +7,7 @@ namespace KataPrimeFactors
 	{
 		public List<int> Calculate(int number)
 		{
-			return null;
+			return new List<int>();
 		}
 	}
 }
