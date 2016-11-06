@@ -9,7 +9,8 @@ namespace KataPrimeFactors.Tests
     {
 		[TestCase(1)]
 		[TestCase(2, 2)]
-		public void OneHasNoPrimeFactors(int number, params int[] factors)
+		[TestCase(3, 3)]
+		public void PrimeFactorsTests(int number, params int[] factors)
 		{
 			var calculator = new PrimeFactorsCalculator();
 			var expectedResult = new List<int>();

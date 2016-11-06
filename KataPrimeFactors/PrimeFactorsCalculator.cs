@@ -9,7 +9,7 @@ namespace KataPrimeFactors
 		{
 			var factors = new List<int>();
 			if(n > 1)
-				factors.Add(2);
+				factors.Add(n);
 			return factors;
 		}
 	}
