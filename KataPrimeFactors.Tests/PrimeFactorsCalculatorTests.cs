@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace KataPrimeFactors.Tests
 {
 	public class PrimeFactorsCalculatorTests
-    {
+	{
 		[TestCase(1)]
 		[TestCase(2, 2)]
 		[TestCase(3, 3)]
@@ -23,7 +23,7 @@ namespace KataPrimeFactors.Tests
 			expectedResult.AddRange(factors);
 
 			var actualResult = calculator.Calculate(number);
-			
+
 			CollectionAssert.AreEquivalent(expectedResult, actualResult);
 		}
 	}
