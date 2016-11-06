@@ -15,6 +15,7 @@ namespace KataPrimeFactors.Tests
 		[TestCase(6, 3, 2)]
 		[TestCase(7, 7)]
 		[TestCase(8, 2, 2, 2)]
+		[TestCase(9, 3, 3)]
 		public void PrimeFactorsTests(int number, params int[] factors)
 		{
 			var calculator = new PrimeFactorsCalculator();
