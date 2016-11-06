@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System.Collections.Generic;
+
+using NUnit.Framework;
 
 
 namespace KataPrimeFactors.Tests
@@ -9,7 +11,7 @@ namespace KataPrimeFactors.Tests
 		public void OneHasNoPrimeFactors()
 		{
 			var calculator = new PrimeFactorsCalculator();
-			var expectedResult = new List();
+			var expectedResult = new List<int>();
 
 			var actualResult = calculator.Calculate(1);
 
