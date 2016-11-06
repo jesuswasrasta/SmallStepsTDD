@@ -7,7 +7,10 @@ namespace KataPrimeFactors
 	{
 		public List<int> Calculate(int n)
 		{
-			return new List<int>();
+			var factors = new List<int>();
+			if(n > 1)
+				factors.Add(2);
+			return factors;
 		}
 	}
 }
